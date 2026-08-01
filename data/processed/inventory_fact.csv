@@ -1,0 +1,31 @@
+sku,product_name,category,store_id,store_name,region,stock_on_hand,reorder_level,reorder_quantity,stock_status,last_restock_date,snapshot_date,inventory_value,units_sold_period,inventory_turnover_ratio
+SKU001,Premium Widget A,Widgets,S001,Downtown Flagship,North,490,65,336,In Stock,2026-07-07,2026-08-01,17150.0,1296,2.64
+SKU001,Premium Widget A,Widgets,S002,Mall Location,South,462,34,321,In Stock,2026-07-29,2026-08-01,16170.0,1306,2.82
+SKU001,Premium Widget A,Widgets,S003,Suburban Store,East,421,82,193,In Stock,2026-07-28,2026-08-01,14735.0,1375,3.26
+SKU001,Premium Widget A,Widgets,S004,Downtown 2nd,East,268,71,143,In Stock,2026-07-04,2026-08-01,9380.0,1356,5.04
+SKU001,Premium Widget A,Widgets,S005,Airport Kiosk,East,67,33,489,In Stock,2026-07-13,2026-08-01,2345.0,1338,19.68
+SKU002,Standard Widget B,Widgets,S001,Downtown Flagship,North,455,24,346,In Stock,2026-07-15,2026-08-01,8190.0,1210,2.65
+SKU002,Standard Widget B,Widgets,S002,Mall Location,South,444,45,213,In Stock,2026-07-08,2026-08-01,7992.0,1314,2.95
+SKU002,Standard Widget B,Widgets,S003,Suburban Store,East,256,37,272,In Stock,2026-07-28,2026-08-01,4608.0,1326,5.16
+SKU002,Standard Widget B,Widgets,S004,Downtown 2nd,East,232,28,445,In Stock,2026-07-30,2026-08-01,4176.0,1424,6.11
+SKU002,Standard Widget B,Widgets,S005,Airport Kiosk,East,131,61,464,In Stock,2026-07-26,2026-08-01,2358.0,1329,10.07
+SKU003,Luxury Gadget X,Gadgets,S001,Downtown Flagship,North,349,91,208,In Stock,2026-07-28,2026-08-01,45366.51,1288,3.68
+SKU003,Luxury Gadget X,Gadgets,S002,Mall Location,South,354,50,221,In Stock,2026-07-13,2026-08-01,46016.46,1352,3.81
+SKU003,Luxury Gadget X,Gadgets,S003,Suburban Store,East,80,66,392,In Stock,2026-07-05,2026-08-01,10399.2,1277,15.77
+SKU003,Luxury Gadget X,Gadgets,S004,Downtown 2nd,East,218,38,316,In Stock,2026-07-03,2026-08-01,28337.82,1395,6.37
+SKU003,Luxury Gadget X,Gadgets,S005,Airport Kiosk,East,418,72,174,In Stock,2026-07-28,2026-08-01,54335.82,1281,3.06
+SKU004,Basic Gadget Y,Gadgets,S001,Downtown Flagship,North,55,50,135,In Stock,2026-07-28,2026-08-01,2749.45,1372,24.5
+SKU004,Basic Gadget Y,Gadgets,S002,Mall Location,South,139,58,342,In Stock,2026-07-31,2026-08-01,6948.61,1272,9.09
+SKU004,Basic Gadget Y,Gadgets,S003,Suburban Store,East,309,38,476,In Stock,2026-07-20,2026-08-01,15446.91,1376,4.44
+SKU004,Basic Gadget Y,Gadgets,S004,Downtown 2nd,East,306,57,292,In Stock,2026-07-14,2026-08-01,15296.94,1242,4.05
+SKU004,Basic Gadget Y,Gadgets,S005,Airport Kiosk,East,428,30,286,In Stock,2026-07-18,2026-08-01,21395.72,1402,3.27
+SKU005,Accessory Pack,Accessories,S001,Downtown Flagship,North,79,62,203,In Stock,2026-07-07,2026-08-01,1026.21,1538,19.23
+SKU005,Accessory Pack,Accessories,S002,Mall Location,South,224,24,253,In Stock,2026-07-14,2026-08-01,2909.76,1396,6.2
+SKU005,Accessory Pack,Accessories,S003,Suburban Store,East,297,66,189,In Stock,2026-07-14,2026-08-01,3858.03,1341,4.5
+SKU005,Accessory Pack,Accessories,S004,Downtown 2nd,East,364,93,255,In Stock,2026-07-17,2026-08-01,4728.36,1457,3.99
+SKU005,Accessory Pack,Accessories,S005,Airport Kiosk,East,192,77,267,In Stock,2026-07-11,2026-08-01,2494.08,1402,7.26
+SKU006,Premium Bundle,Bundles,S001,Downtown Flagship,North,195,91,429,In Stock,2026-07-19,2026-08-01,29248.05,1243,6.34
+SKU006,Premium Bundle,Bundles,S002,Mall Location,South,147,67,319,In Stock,2026-07-04,2026-08-01,22048.53,1418,9.58
+SKU006,Premium Bundle,Bundles,S003,Suburban Store,East,123,39,187,In Stock,2026-07-07,2026-08-01,18448.77,1334,10.76
+SKU006,Premium Bundle,Bundles,S004,Downtown 2nd,East,335,60,467,In Stock,2026-07-26,2026-08-01,50246.65,1329,3.96
+SKU006,Premium Bundle,Bundles,S005,Airport Kiosk,East,404,49,486,In Stock,2026-07-24,2026-08-01,60595.96,1246,3.08

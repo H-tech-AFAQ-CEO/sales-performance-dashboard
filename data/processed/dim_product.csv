@@ -1,0 +1,7 @@
+sku,product_name,category,cost,retail_price,status
+SKU001,Premium Widget A,Widgets,15.0,35.0,Active
+SKU002,Standard Widget B,Widgets,8.0,18.0,Active
+SKU003,Luxury Gadget X,Gadgets,45.0,129.99,Active
+SKU004,Basic Gadget Y,Gadgets,20.0,49.99,Active
+SKU005,Accessory Pack,Accessories,5.0,12.99,Active
+SKU006,Premium Bundle,Bundles,60.0,149.99,Active
