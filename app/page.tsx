@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { TrendingUp, TrendingDown, DollarSign, ShoppingCart, Percent, Package, Calendar } from 'lucide-react';
+import { DollarSign, ShoppingCart, Percent, TrendingUp } from 'lucide-react';
+import Navbar from '@/components/navbar';
+import StatCard from '@/components/stat-card';
 
 export default function Home() {
-  const [dateRange, setDateRange] = useState('7d');
+  const [dateRange, setDateRange] = useState('90d');
 
   const metrics = [
     {
@@ -12,7 +14,7 @@ export default function Home() {
       value: '$2,620,601',
       change: '+12.5%',
       icon: DollarSign,
-      trend: 'up',
+      trend: 'up' as const,
       gradient: 'from-emerald-500 to-teal-600'
     },
     {
@@ -20,7 +22,7 @@ export default function Home() {
       value: '216,474',
       change: '+8.2%',
       icon: ShoppingCart,
-      trend: 'up',
+      trend: 'up' as const,
       gradient: 'from-blue-500 to-cyan-600'
     },
     {
@@ -28,7 +30,7 @@ export default function Home() {
       value: '$1,607,877',
       change: '+15.3%',
       icon: TrendingUp,
-      trend: 'up',
+      trend: 'up' as const,
       gradient: 'from-violet-500 to-purple-600'
     },
     {
@@ -36,7 +38,7 @@ export default function Home() {
       value: '61.4%',
       change: '+2.1%',
       icon: Percent,
-      trend: 'up',
+      trend: 'up' as const,
       gradient: 'from-amber-500 to-orange-600'
     }
   ];
@@ -57,75 +59,39 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-slate-800/50 bg-slate-950/95 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-6 py-6 sm:px-8">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Sales & Inventory Analytics
-              </h1>
-              <p className="mt-1 text-sm text-slate-400">90-day performance dashboard</p>
-            </div>
-            <div className="flex gap-2">
-              {['7d', '30d', '90d'].map(period => (
-                <button
-                  key={period}
-                  onClick={() => setDateRange(period)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    dateRange === period
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
-                      : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
-                  }`}
-                >
-                  {period.toUpperCase()}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-slate-950">
+      <Navbar />
 
       {/* Main Content */}
       <main className="mx-auto max-w-7xl px-6 py-8 sm:px-8">
+        {/* Page Header */}
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-white">Sales Overview</h1>
+            <p className="mt-2 text-slate-400">Real-time sales and inventory insights</p>
+          </div>
+          <div className="flex gap-2">
+            {['7d', '30d', '90d'].map(period => (
+              <button
+                key={period}
+                onClick={() => setDateRange(period)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  dateRange === period
+                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                }`}
+              >
+                {period.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* KPI Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
-          {metrics.map((metric, idx) => {
-            const Icon = metric.icon;
-            return (
-              <div
-                key={idx}
-                className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 p-6 border border-slate-700/50 hover:border-slate-600/70 transition-all duration-300 group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity" />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-slate-400">{metric.label}</span>
-                    <div className={`p-2 rounded-lg bg-gradient-to-br ${metric.gradient} opacity-80`}>
-                      <Icon className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="mb-3">
-                    <p className="text-3xl font-bold text-white">{metric.value}</p>
-                  </div>
-                  <div className="flex items-center gap-1 text-sm">
-                    {metric.trend === 'up' ? (
-                      <>
-                        <TrendingUp className="w-4 h-4 text-emerald-400" />
-                        <span className="text-emerald-400">{metric.change}</span>
-                      </>
-                    ) : (
-                      <>
-                        <TrendingDown className="w-4 h-4 text-rose-400" />
-                        <span className="text-rose-400">{metric.change}</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {metrics.map((metric, idx) => (
+            <StatCard key={idx} {...metric} />
+          ))}
         </div>
 
         {/* Charts Section */}
